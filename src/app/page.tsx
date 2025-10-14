@@ -1,15 +1,11 @@
 import React from 'react';
-import {Button} from "@/components/ui/button";
-import {CirclePlusIcon} from "lucide-react";
+import CustomButton from "@/components/CustomButton";
 
 export default function HomePage() {
-  return (
-    <div className="flex items-center justify-center w-full h-screen">
-        <Button variant="default" size="xl" className="text-custom">
-            <CirclePlusIcon />
-            Click me
-        </Button>
-    </div>
-  );
+    return (
+        <div className="flex items-center justify-center w-full h-screen">
+            <CustomButton isRounded={true} disabled={false}/>
+        </div>
+    );
 }
 
