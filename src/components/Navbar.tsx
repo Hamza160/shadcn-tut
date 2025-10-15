@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {LogOut, Moon, Settings, User} from "lucide-react";
+import {LogOut, Moon, Settings, SquareM, SquareMenu, User} from "lucide-react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {
     DropdownMenu,
@@ -10,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {Button} from "@/components/ui/button";
 
 const Navbar = () => {
     return (
@@ -42,6 +43,19 @@ const Navbar = () => {
                             <LogOut className={'h-[1.2rem] w-[1.2rem] mr-2'}/>
                             Logout
                         </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="outline" size="icon">
+                            <SquareMenu/>
+                            <span className="sr-only">Open Menu</span>
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem>Menu Item 1</DropdownMenuItem>
+                        <DropdownMenuItem>Menu Item 2</DropdownMenuItem>
+                        <DropdownMenuItem>Menu Item 3</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>

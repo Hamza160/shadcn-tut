@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191a9852-1d7a-4494-af19-fb21dd718af1" name="Changes" comment="" />
+    <list default="true" id="191a9852-1d7a-4494-af19-fb21dd718af1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "HamzaAshraf160"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HamzaAshraf160&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hamza160/shadcn-tut.git",
-    "accountId": "ba847087-290c-4f71-a2f1-1cad21c371ef"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hamza160/shadcn-tut.git&quot;,
+    &quot;accountId&quot;: &quot;ba847087-290c-4f71-a2f1-1cad21c371ef&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.2/bin/php" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -89,6 +93,8 @@
       <workItem from="1760353398008" duration="1076000" />
       <workItem from="1760355074902" duration="386000" />
       <workItem from="1760355497086" duration="1940000" />
+      <workItem from="1760443213158" duration="1814000" />
+      <workItem from="1760527359354" duration="319000" />
     </task>
     <servers />
   </component>
