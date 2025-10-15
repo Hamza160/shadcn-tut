@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {LogOut, Moon, Settings, SquareM, SquareMenu, User} from "lucide-react";
+import {LogOut, Moon, Settings, SquareMenu, User} from "lucide-react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {
     DropdownMenu,
@@ -11,6 +11,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import {Button} from "@/components/ui/button";
+import {ModeToggle} from "@/components/ModeToggle";
 
 const Navbar = () => {
     return (
@@ -20,7 +21,7 @@ const Navbar = () => {
             {/*Right*/}
             <div className="flex items-center gap-4">
                 <Link href={"/"}>Dashboard</Link>
-                <Moon/>
+                <ModeToggle/>
                 <DropdownMenu>
                     <DropdownMenuTrigger>
                         <Avatar>
