@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191a9852-1d7a-4494-af19-fb21dd718af1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/theme-provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,7 @@
       <workItem from="1760355074902" duration="386000" />
       <workItem from="1760355497086" duration="1940000" />
       <workItem from="1760443213158" duration="1814000" />
-      <workItem from="1760527359354" duration="626000" />
+      <workItem from="1760527359354" duration="996000" />
     </task>
     <servers />
   </component>
