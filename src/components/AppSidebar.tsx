@@ -1,4 +1,4 @@
-import {Calendar, ChevronUp, Home, Inbox, Plus, ProjectorIcon, Search, Settings, User2} from "lucide-react"
+import {Calendar, ChevronDown, ChevronUp, Home, Inbox, Plus, ProjectorIcon, Search, Settings, User2} from "lucide-react"
 
 import {
     Sidebar,
@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
 import Image from "next/image";
+import {Collapsible, CollapsibleTrigger} from "@/components/ui/collapsible";
 
 // Menu items.
 const items = [
@@ -122,6 +123,41 @@ function AppSidebar() {
                                     </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem><SidebarMenuItem>
+                            <SidebarMenuButton asChild>
+                                <Link href="/">
+                                    <Plus/>
+                                    Add Project
+                                </Link>
+                            </SidebarMenuButton>
+                        </SidebarMenuItem><SidebarMenuItem>
+                            <SidebarMenuButton asChild>
+                                <Link href="/">
+                                    <ProjectorIcon/>
+                                    See All Projects
+                                </Link>
+                            </SidebarMenuButton>
+                        </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
+                <Collapsible defaultOpen={true} className="group/collapsible">
+                    <SidebarGroup>
+                        <SidebarGroupLabel>
+                            <CollapsibleTrigger>
+                                Help
+                                <ChevronDown className="ml-auto transition-transform"/>
+                            </CollapsibleTrigger>
+                        </SidebarGroupLabel>
+                        <SidebarGroupContent>
+                            <SidebarMenu>
+                                <SidebarMenuItem>
+                                    <SidebarMenuButton asChild>
+                                        <Link href="/">
+                                            <ProjectorIcon/>
+                                            See All Projects
+                                        </Link>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem><SidebarMenuItem>
                                 <SidebarMenuButton asChild>
                                     <Link href="/">
                                         <Plus/>
@@ -136,9 +172,10 @@ function AppSidebar() {
                                     </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
+                            </SidebarMenu>
+                        </SidebarGroupContent>
+                    </SidebarGroup>
+                </Collapsible>
             </SidebarContent>
             <SidebarFooter>
                 <SidebarMenu>
