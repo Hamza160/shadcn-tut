@@ -6,9 +6,9 @@ import {
     SidebarGroup, SidebarGroupAction,
     SidebarGroupContent,
     SidebarGroupLabel, SidebarHeader,
-    SidebarMenu,
+    SidebarMenu, SidebarMenuBadge,
     SidebarMenuButton,
-    SidebarMenuItem, SidebarSeparator,
+    SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator,
 } from "@/components/ui/sidebar"
 import {
     DropdownMenu,
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
 import Image from "next/image";
-import {Collapsible, CollapsibleTrigger} from "@/components/ui/collapsible";
+import {Collapsible, CollapsibleContent, CollapsibleTrigger} from "@/components/ui/collapsible";
 
 // Menu items.
 const items = [
@@ -85,23 +85,9 @@ function AppSidebar() {
                                             <span>{item.title}</span>
                                         </a>
                                     </SidebarMenuButton>
-                                </SidebarMenuItem>
-                            ))}
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
-                <SidebarGroup>
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
-                    <SidebarGroupContent>
-                        <SidebarMenu>
-                            {items.map((item) => (
-                                <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuButton asChild>
-                                        <a href={item.url}>
-                                            <item.icon/>
-                                            <span>{item.title}</span>
-                                        </a>
-                                    </SidebarMenuButton>
+                                    {item.title === 'Inbox' && (
+                                        <SidebarMenuBadge>24</SidebarMenuBadge>
+                                    )}
                                 </SidebarMenuItem>
                             ))}
                         </SidebarMenu>
@@ -140,42 +126,94 @@ function AppSidebar() {
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
+                {/*Collapsible*/}
                 <Collapsible defaultOpen={true} className="group/collapsible">
                     <SidebarGroup>
-                        <SidebarGroupLabel>
+                        <SidebarGroupLabel asChild>
                             <CollapsibleTrigger>
-                                Help
-                                <ChevronDown className="ml-auto transition-transform"/>
+                                Collapseable Group
+                                <ChevronDown
+                                    className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180"/>
                             </CollapsibleTrigger>
                         </SidebarGroupLabel>
-                        <SidebarGroupContent>
-                            <SidebarMenu>
-                                <SidebarMenuItem>
+                        <CollapsibleContent>
+                            <SidebarGroupContent>
+                                <SidebarMenu>
+                                    <SidebarMenuItem>
+                                        <SidebarMenuButton asChild>
+                                            <Link href="/">
+                                                <ProjectorIcon/>
+                                                See All Projects
+                                            </Link>
+                                        </SidebarMenuButton>
+                                    </SidebarMenuItem><SidebarMenuItem>
+                                    <SidebarMenuButton asChild>
+                                        <Link href="/">
+                                            <Plus/>
+                                            Add Project
+                                        </Link>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem><SidebarMenuItem>
                                     <SidebarMenuButton asChild>
                                         <Link href="/">
                                             <ProjectorIcon/>
                                             See All Projects
                                         </Link>
                                     </SidebarMenuButton>
-                                </SidebarMenuItem><SidebarMenuItem>
-                                <SidebarMenuButton asChild>
-                                    <Link href="/">
-                                        <Plus/>
-                                        Add Project
-                                    </Link>
-                                </SidebarMenuButton>
-                            </SidebarMenuItem><SidebarMenuItem>
+                                </SidebarMenuItem>
+                                </SidebarMenu>
+                            </SidebarGroupContent>
+                        </CollapsibleContent>
+                    </SidebarGroup>
+                </Collapsible>
+                {/*Nested*/}
+                <SidebarGroup>
+                    <SidebarGroupLabel>Nested Items</SidebarGroupLabel>
+                    <SidebarGroupAction>
+                        <Plus/>
+                        <span className="sr-only">Add Project</span>
+                    </SidebarGroupAction>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
                                     <Link href="/">
                                         <ProjectorIcon/>
                                         See All Projects
                                     </Link>
                                 </SidebarMenuButton>
+                                <SidebarMenuSub>
+                                    <SidebarMenuSubItem>
+                                        <SidebarMenuSubButton asChild>
+                                            <Link href="/#">
+                                                <Plus/>
+                                                Add Project
+                                            </Link>
+                                        </SidebarMenuSubButton>
+                                    </SidebarMenuSubItem>
+                                </SidebarMenuSub>
+                                <SidebarMenuSub>
+                                    <SidebarMenuSubItem>
+                                        <SidebarMenuSubButton asChild>
+                                            <Link href="/#">
+                                                <Plus/>
+                                                Add Project
+                                            </Link>
+                                        </SidebarMenuSubButton>
+                                    </SidebarMenuSubItem>
+                                </SidebarMenuSub>
                             </SidebarMenuItem>
-                            </SidebarMenu>
-                        </SidebarGroupContent>
-                    </SidebarGroup>
-                </Collapsible>
+                            <SidebarMenuItem>
+                            <SidebarMenuButton asChild>
+                                <Link href="/">
+                                    <ProjectorIcon/>
+                                    See All Projects
+                                </Link>
+                            </SidebarMenuButton>
+                        </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
             </SidebarContent>
             <SidebarFooter>
                 <SidebarMenu>
