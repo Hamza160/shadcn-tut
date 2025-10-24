@@ -14,6 +14,17 @@ import {
 } from "@/components/ui/hover-card"
 import {BadgeCheck, Candy, Shield} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
+import {Badge} from "@/components/ui/badge";
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+import EditUser from "@/components/EditUser";
+import {Button} from "@/components/ui/button";
 
 interface Props {
     params: Promise<{ username: string }>
@@ -78,7 +89,7 @@ export default async function SingleUser({params}: Props) {
                             <HoverCard>
                                 <HoverCardTrigger asChild>
                                     <Candy size={36}
-                                                className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"/>
+                                           className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"/>
                                 </HoverCardTrigger>
                                 <HoverCardContent>
                                     <h1 className="font-bold mb-2">Awarded</h1>
@@ -102,13 +113,42 @@ export default async function SingleUser({params}: Props) {
                     </div>
                     {/*   Information Container */}
                     <div className="bg-primary-foreground p-4 rounded-lg">
-                        <h1 className="font-semibold">User Badges</h1>
+                        <div className="flex items-center justify-between">
+                            <h1 className="font-semibold">User Information</h1>
+                            <Sheet>
+                                <SheetTrigger asChild>
+                                    <Button>Edit User</Button>
+                                </SheetTrigger>
+                                <EditUser />
+                            </Sheet>
+                        </div>
                         <div className="space-y-4 mt-4">
                             <div className="flex flex-col gap-2 mb-8">
                                 <p className="text-sm text-muted-foreground">Profile Completion</p>
                                 <Progress value={33}/>
                             </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Username:</span>
+                                <span>{username}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Email:</span>
+                                <span>hamza@gmail.com</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Phone Number:</span>
+                                <span>+923110767466</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Location:</span>
+                                <span>New York, NY</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Role:</span>
+                                <Badge>Admin</Badge>
+                            </div>
                         </div>
+                        <p className="text-sm text-muted-foreground mt-2">Joined on 2025.01.01</p>
                     </div>
                     {/*   Card List Container */}
                     <div className="bg-primary-foreground p-4 rounded-lg">
