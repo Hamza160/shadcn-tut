@@ -25,6 +25,9 @@ import {
 } from "@/components/ui/sheet"
 import EditUser from "@/components/EditUser";
 import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import React from "react";
+import {MultipleLineChart} from "@/components/MultipleLineChart";
 
 interface Props {
     params: Promise<{ username: string }>
@@ -119,7 +122,7 @@ export default async function SingleUser({params}: Props) {
                                 <SheetTrigger asChild>
                                     <Button>Edit User</Button>
                                 </SheetTrigger>
-                                <EditUser />
+                                <EditUser/>
                             </Sheet>
                         </div>
                         <div className="space-y-4 mt-4">
@@ -158,12 +161,22 @@ export default async function SingleUser({params}: Props) {
                 {/*  Right  */}
                 <div className="w-full xl:w-2/3 space-y-6">
                     {/*    User Card Container*/}
-                    <div className="bg-primary-foreground p-4 rounded-lg">
-                        User Card
+                    <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+                        <div className="flex items-center">
+                            <Avatar className="size-12">
+                                <AvatarImage src="https://avatars.githubusercontent.com/u/69757932?s=40&v=4"/>
+                                <AvatarFallback>CN</AvatarFallback>
+                            </Avatar>
+                            <h1 className="text-xl font-semibold">Hamza Ashraf</h1>
+                        </div>
+                        <p className="text-sm text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Enim fugit in mollitia natus nisi,
+                            officiis totam vel? Aspernatur, consectetur dignissimos eveniet fugit hic ipsam libero modi
+                            pariatur tempore unde voluptatum.</p>
                     </div>
                     {/*    Chart Container*/}
                     <div className="bg-primary-foreground p-4 rounded-lg">
-                        Chart
+                        <MultipleLineChart/>
                     </div>
                 </div>
             </div>
