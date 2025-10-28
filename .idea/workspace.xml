@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191a9852-1d7a-4494-af19-fb21dd718af1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/DataTablePagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/payments/columns.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/payments/columns.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/payments/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/payments/data-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +112,8 @@
       <workItem from="1761231913070" duration="2000" />
       <workItem from="1761336568820" duration="2945000" />
       <workItem from="1761511243552" duration="954000" />
+      <workItem from="1761570289500" duration="2944000" />
+      <workItem from="1761677696495" duration="2684000" />
     </task>
     <servers />
   </component>
